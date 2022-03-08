@@ -1,6 +1,6 @@
 import React from 'react'
-import { Nav, HeaderContainer, HeaderLogo, HeaderIcon, HeaderLink, HeaderButtons, HeaderMenu, Bars } from './HeaderElements'
-import logo from '../../../assets/logo.png';
+import { Nav, HeaderContainer, HeaderLogo, HeaderIcon, HeaderLink, HeaderButtons, HeaderMenu, Bars, HeaderIconText } from './HeaderElements'
+import logo from '../../../assets/logo-only.png';
 import Button from '../Button/Button';
 
 function Header() {

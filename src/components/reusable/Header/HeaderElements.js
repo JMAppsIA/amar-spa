@@ -38,6 +38,11 @@ export const HeaderIcon = styled.img`
     height: 125px;
 `;
 
+export const HeaderIconText = styled.img`
+    width: 220px;
+    height: 125px;
+`;
+
 export const HeaderMenu = styled.div`
     display: flex;
     align-items: center;

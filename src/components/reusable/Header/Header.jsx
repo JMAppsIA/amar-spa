@@ -21,12 +21,12 @@ function Header() {
           </HeaderMenu>
         </HeaderContainer>
         <HeaderButtons>
-          {/* <StyledButton
+          <StyledButton
             to={'/sign-in'}
-            primary={true}
+            hasBackground={true}
           >
             {`Ingresar`}
-          </StyledButton> */}
+          </StyledButton>
         </HeaderButtons>
       </Nav>
     </>

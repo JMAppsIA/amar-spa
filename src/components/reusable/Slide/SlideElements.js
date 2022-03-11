@@ -1,24 +1,23 @@
 import styled from 'styled-components';
 
-export const SlideContent = styled.div`
-    width: 100%;
+export const SlideContainer = styled.div`
     display: flex;
     align-items: center;
     flex-wrap: wrap;
     margin-top: 241px;
     margin-left: 100px;
+
+    @media screen and (max-width: 768px) {
+        margin-top: 62px;
+        margin-left:25px;
+    }
 `;
 
-export const SlideLeftSection = styled.div`
+export const SlideContent = styled.div`
     box-sizing: border-box;
     padding: 0 1.25rem;
     width: 50%;
 
-`;
-
-export const SlideTexts = styled.div`
-    display: block;
-    align-content: center;
 `;
 
 export const SlideTitle = styled.div`
@@ -42,13 +41,10 @@ export const SlideButtons = styled.div`
     display: flex;
 `;
 
-export const SlideRightSection = styled.div`
+export const SlideImages = styled.div`
     box-sizing: border-box;
     padding: 0 1.25rem;
-    width: 50%;
-`;
-
-export const SlideImages = styled.div`
+    width: 50%;       
 `;
 
 export const SlideImageFront = styled.img`
@@ -58,6 +54,12 @@ export const SlideImageFront = styled.img`
     position: absolute;
     right: 0;
     top: 50px;
+
+    @media screen and (max-width: 768px) {
+        width: 548px;
+        height: 597px;
+        left: 50%;
+    }
 `;
 
 export const SlideImageBack = styled.img`
@@ -67,4 +69,17 @@ export const SlideImageBack = styled.img`
     position: absolute;
     right: 0;
     top: 50px;
+
+    @media screen and (max-width: 768px) {
+        display: none;
+    }
+`;
+
+export const SlideBackgroundCircle = styled.span`
+    z-index: -1;
+    position: absolute;
+    right: 0;
+    top: 50px;
+    background: #F2F2F2;
+    border-radius: 180px 0px 0px 0px;
 `;

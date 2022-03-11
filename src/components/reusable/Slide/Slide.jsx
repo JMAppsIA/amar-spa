@@ -1,15 +1,14 @@
 import React from 'react'
 import { StyledBadge } from '../Badge/StyledBadge'
 import { StyledButton } from '../Button/StyledButton'
-import { SlideContent, SlideLeftSection, SlideTexts, SlideTitle, SlideDescription, SlideButtons, SlideRightSection, SlideImageBack, SlideImageFront } from './SlideElements'
+import { SlideContainer, SlideContent, SlideTitle, SlideDescription, SlideButtons, SlideImages, SlideImageBack, SlideImageFront } from './SlideElements'
 import image from '../../../assets/spa-girl-1.png';
 import leaf from '../../../assets/leaf-gray.png';
 
 export function Slide() {
   return (
-    <SlideContent>
-        <SlideLeftSection>
-        <SlideTexts>
+    <SlideContainer>
+        <SlideContent>
             <SlideTitle>
               <p>Estamos enfocados en tu cuidado personal</p>
             </SlideTitle>
@@ -19,12 +18,11 @@ export function Slide() {
             <SlideButtons>
               <StyledButton to={`/enviar-solicitud`} hasBackground={true}>{`Dejar una solicitud`}</StyledButton>
             </SlideButtons>
-        </SlideTexts>
-        </SlideLeftSection>
-        <SlideRightSection>
+        </SlideContent>
+        <SlideImages>
             <SlideImageFront src={image} />
             <SlideImageBack src={leaf} />
-        </SlideRightSection>
-    </SlideContent>
+        </SlideImages>
+    </SlideContainer>
   )
 }

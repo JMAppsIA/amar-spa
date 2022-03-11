@@ -28,3 +28,10 @@ export const CardContainer = styled.div`
         width: calc(100% - 60px);
     }
 `;
+
+export const HomeContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+`;

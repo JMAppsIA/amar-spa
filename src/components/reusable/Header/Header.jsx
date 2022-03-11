@@ -1,7 +1,7 @@
 import React from 'react'
-import { Nav, HeaderContainer, HeaderLogo, HeaderIcon, HeaderLink, HeaderButtons, HeaderMenu, Bars, HeaderIconText } from './HeaderElements'
+import { Nav, HeaderContainer, HeaderLogo, HeaderIcon, HeaderLink, HeaderButtons, HeaderMenu, Bars } from './HeaderElements'
 import logo from '../../../assets/logo-only.png';
-import Button from '../Button/Button';
+import { StyledButton } from '../Button/StyledButton';
 
 function Header() {
   return (
@@ -21,10 +21,12 @@ function Header() {
           </HeaderMenu>
         </HeaderContainer>
         <HeaderButtons>
-          <Button
+          {/* <StyledButton
             to={'/sign-in'}
-            text={`Ingresar`}
-          />
+            primary={true}
+          >
+            {`Ingresar`}
+          </StyledButton> */}
         </HeaderButtons>
       </Nav>
     </>

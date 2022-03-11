@@ -1,9 +1,14 @@
 import React from 'react'
-import { HomeSection } from './HomeElements'
+import { Slide } from '../reusable/Slide/Slide'
+import { HomeSection, HomeContainer } from './HomeElements'
 
 function Home() {
   return (
-    <HomeSection>Home</HomeSection>
+    <HomeSection>
+      <HomeContainer>
+        <Slide />
+      </HomeContainer>
+    </HomeSection>
   )
 }
 

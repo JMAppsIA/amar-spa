@@ -1,28 +1,24 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
-
 export const StyledButton = styled(Link)`
+    background: ${({hasBackground}) => (hasBackground ? '#B8E8D1' : 'transparent')};
     box-shadow: 0px 10px 16px rgba(192, 220, 207, 0.25);
     border-radius: 10px;
-    border: .5px solid #22818b;
-    outline: none;
-    cursor: pointer;
-    transition: all 0.2s ease-in-out;
-    text-decoration: none;
-    width: 150px;
+    width: 188px;
     height: 52px;
-    font-weight: normal;
+    font-style: normal;
+    font-weight: 500;
     font-size: 16px;
     line-height: 139.34%;
+    outline: none;
     display: grid;
     align-items: center;
     text-align: center;
-    color: #333333;
-
-    &:hover {
+    text-decoration: none;
+    color: #32463D;
+    &:hover{
         transition: all 0.2s ease-in-out;
-        background: #22818b;
-        color: #333333;
+        background: ${({primary}) => (primary ? '#B8E8D1' : '#01BF71' )};
     }
 `;

@@ -17,9 +17,9 @@ export const CardContainer = styled.div`
 
     position: relative;
     width: calc(100% - 40px);
-    max-width: 1440px;
-    margin-right: auto;
-    margin-left: auto;
+    max-width: 100%;
+    margin-right: 100px;
+    margin-left: 100px;
 
     @media (min-width: 768px) {
         display: flex;
@@ -224,20 +224,28 @@ export const CardButtons = styled.div`
 `;
 
 export const CardButton = styled.a`
-    display: ${({isHidden}) => (isHidden ? 'block' : 'block')};
-    width: 140px;
-    height: 40px;
+    display: ${({isHidden}) => (isHidden ? 'grid' : 'grid')};
     overflow: hidden;
-    text-indent: 101%;
-    white-space: nowrap;
-    border-radius: 4px;
-    ${({hasBackground,backgroundImage}) => (hasBackground? `
-    background-image: url(${backgroundImage});
-    background-position: center;
-    background-size: 85% auto;
-    background-repeat: no-repeat;` : ``)};
-    
-    background-color: var(--dark-blue);
+    /* text-indent: 101%; */
+    cursor: pointer;
+    background: ${({hasBackground}) => (hasBackground ? '#B8E8D1' : 'transparent')};
+    box-shadow: 0px 10px 16px rgba(192, 220, 207, 0.25);
+    border-radius: 10px;
+    width: 188px;
+    height: 52px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 139.34%;
+    outline: none;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    color: #32463D;
+    &:hover{
+        transition: all 0.2s ease-in-out;
+        background: ${({primary}) => (primary ? '#B8E8D1' : '#01BF71' )};
+    }
 
     @media (min-width: 1024px) {
         width: 206px;
@@ -295,7 +303,11 @@ export const CardRightContent = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    
+    ${({cardRightHasBackground}) => (cardRightHasBackground? 
+    `
+        background: #F2F2F2;
+        border-radius: 354px 0px 0px 0px;
+    ` : ``)};
     ${({hasImage}) => (hasImage? 
     `
         position: relative;
@@ -307,11 +319,10 @@ export const CardRightContent = styled.div`
     ${({hasRoundedCorner}) => (
         hasRoundedCorner ? 
         `
-            overflow: hidden;
-            border-radius: 5px;
+            border-radius: 354px 0px 0px 0px;
 
             @media (min-width: 1024px) {                
-                border-radius: 10px;
+                border-radius: 354px 0px 0px 0px;
             }
         ` : ``
     )}
@@ -341,8 +352,8 @@ export const CardSpacer = styled.div`
 export const CardImage = styled.a`
     position: absolute;
     top: 0;
-    width: 100%;
-    height: 100%;    
+    width: 679px;
+    height: 776px;    
     ${({imageHasAnimation,pageHasLoaded}) => (imageHasAnimation? 
     `
         opacity: `+(!pageHasLoaded? `none`:`0.01`)+`;

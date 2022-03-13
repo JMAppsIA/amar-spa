@@ -1,12 +1,14 @@
 import styled from 'styled-components';
 
 export const StyleH1 = styled.h1`
-    font-size: 30px;
-    letter-spacing: 0;
-    line-height: 1.1;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    color: #333333;
+    /* margin-bottom: 50px; */
 
     @media (min-width: 1024px) {
-        font-size: 54px;
+        font-size: 48px;
         line-height: 1.05;
     }
 `;
@@ -34,10 +36,13 @@ export const StyleH3 = styled.h3`
 `;
 
 export const StyleH4 = styled.h4`
-    font-size: 16px;
-    line-height: 1.75;
+    ont-style: normal;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 33px;
+    color: #333333;
 
     @media (min-width: 1024px) {
-        font-size: 20px;
+        font-size: 24px;
     }    
 `;

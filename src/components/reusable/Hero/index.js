@@ -8,7 +8,7 @@ const Hero = ({cardTitle,hasDescription, cardDescription, isReverse, hasButtons,
                 buttonOneIsHidden, buttonOneHasBackgroundImage, buttonOneBackgroundImage, textButtonOne,
                 buttonTwoIsHidden, buttonTwoHasBackgroundImage, buttonTwoBackgroundImage, textButtonTwo,
                 cardRoundedCorner, cardHasImage, cardImage, imageHasAnimation, 
-                pageHasLoaded, cardHasArrow, cardHasLogo,cardHasBackgroundColor,cardBgColor,isCardHeader}) => {
+                pageHasLoaded, cardHasArrow, cardHasLogo,cardHasBackgroundColor,cardBgColor,isCardHeader, cardRightHasBackground}) => {
 
     useEffect( ()=>{
         pageHasLoaded=true;        
@@ -72,7 +72,9 @@ const Hero = ({cardTitle,hasDescription, cardDescription, isReverse, hasButtons,
                 
                 <CardRightContent 
                     hasRoundedCorner = {cardRoundedCorner}
-                    hasImage = {cardHasImage}>
+                    hasImage = {cardHasImage}
+                    cardRightHasBackground= {cardRightHasBackground}
+                    >
                     <CardSpacer></CardSpacer>            
                         <CardImage pageHasLoaded={pageHasLoaded} imageHasAnimation={imageHasAnimation} cardBackgroundImage={cardImage}/>              
                 </CardRightContent>
@@ -107,7 +109,8 @@ Hero.propTypes = {
     cardHasLogo: PropTypes.bool.isRequired,
     cardHasBackgroundColor: PropTypes.bool.isRequired,
     cardBgColor: PropTypes.string,
-    isCardHeader: PropTypes.bool.isRequired
-  };
+    isCardHeader: PropTypes.bool.isRequired,
+    cardRightHasBackground: PropTypes.bool.isRequired
+}
 
 export default Hero;

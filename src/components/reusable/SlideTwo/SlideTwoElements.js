@@ -6,7 +6,6 @@ export const SlideContainer = styled.div`
     flex-wrap: wrap;
     /* margin-top: 241px; */
     margin-left: 100px;
-    background-color: #fff;
 
     @media screen and (max-width: 768px) {
         margin-top: 62px;
@@ -27,7 +26,7 @@ export const SlideTitle = styled.div`
     font-size: 48px;
     color: #333333;
     margin-bottom: 50px;
-
+    text-align: left;
 `;
 
 export const SlideDescription = styled.div`
@@ -37,7 +36,6 @@ export const SlideDescription = styled.div`
     line-height: 33px;
     color: #333333;
     margin-bottom: 7px;
-    text-align: left;
 `;
 
 export const SlideButtons = styled.div`
@@ -47,14 +45,11 @@ export const SlideButtons = styled.div`
 export const SlideImages = styled.div`
     box-sizing: border-box;
     padding: 0 1.25rem;
-    width: 50%;
-    background: #F2F2F2;
-    border-radius: 354px 0px 0px 0px;       
+    width: 50%;    
 `;
 
 export const SlideImageFront = styled.img`
-    width: 679px;
-    height: 776px;
+    height: 810px;
     z-index: 3;
 
     @media screen and (max-width: 768px) {

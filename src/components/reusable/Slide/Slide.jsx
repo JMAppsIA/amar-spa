@@ -1,9 +1,8 @@
 import React from 'react'
 import { StyledBadge } from '../Badge/StyledBadge'
 import { StyledButton } from '../Button/StyledButton'
-import { SlideContainer, SlideContent, SlideTitle, SlideDescription, SlideButtons, SlideImages, SlideImageBack, SlideImageFront } from './SlideElements'
+import { SlideContainer, SlideContent, SlideTitle, SlideDescription, SlideButtons, SlideImages, SlideImageFront } from './SlideElements'
 import image from '../../../assets/spa-girl-1.png';
-import leaf from '../../../assets/leaf-gray.png';
 
 export function Slide() {
   return (
@@ -21,7 +20,6 @@ export function Slide() {
         </SlideContent>
         <SlideImages>
             <SlideImageFront src={image} />
-            <SlideImageBack src={leaf} />
         </SlideImages>
     </SlideContainer>
   )
